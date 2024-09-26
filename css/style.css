@@ -1,0 +1,145 @@
+.services {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.icon {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  flex-shrink: 0;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services .desc h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.services .desc p {
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 1em;
+  color: #555;
+  text-align: left;
+}
+
+#colorlib-services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#colorlib-services .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  flex: 0 0 48%;
+  max-width: 48%;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icon {
+    margin-bottom: 10px;
+  }
+}
+/* about us section */
+#colorlib-about {
+  padding: 40px 0;
+}
+
+#colorlib-about .container {
+  max-width: 1200px;
+}
+
+#colorlib-about h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#colorlib-about p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+#colorlib-about img.img-responsive {
+  width: 95%;
+  height: 275px;
+  /* height: auto; */
+}
+
+#colorlib-services {
+  padding: 20px 0;
+  background-color: #f8f8f8;
+}
+
+#colorlib-services .container {
+  max-width: 1200px;
+}
+
+#colorlib-services .services {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#colorlib-services .services h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#colorlib-services .services p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  #colorlib-about .row {
+      display: flex;
+      align-items: center;
+  }
+
+  #colorlib-about .col-md-6 {
+      width: 50%;
+  }
+
+  #colorlib-services .row {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #colorlib-services .col-md-4 {
+      width: 30%;
+  }
+}

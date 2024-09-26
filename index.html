@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Alt. Ltd</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/flexible.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
+    <link rel="icon" href="images/logo.png">
+    <script type="module" src="./layouts/main.js"></script>
+    <script type="module" src="./layouts/services.js"></script>
+    <script type="module" src="./layouts/card.js"></script>
+    <style>
+        .colorlib-counters {
+            /* position: relative; */
+            padding: 30px;
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        .colorlib-counters .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            visibility: 200%;
+        }
+
+        .colorlib-counters .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .colorlib-counters .animate-box {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .colorlib-counters .icon img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            justify-content: inline-block;
+        }
+
+        .colorlib-counters .colorlib-counter {
+            font-size: 40px;
+            font-weight: bold;
+            gap: 30px;
+        }
+
+        .colorlib-counters .colorlib-counter-label {
+            font-size: 14px;
+        }
+
+        .flexslider {
+            /* margin: 0;*/
+            padding: 0;
+            margin: 0;
+            /* margin-top: -10.5px; */
+            margin-top: -63px;
+            margin-right: -50px;
+            margin-left: -50px;
+            height: 60vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+            border: none;
+        }
+
+        .flexslider .slides li {
+            height: 60vh;
+            display:inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover; 
+            background-position: center; 
+            position: relative;
+        }
+
+        .flexslider .slides li .slider-text {
+            color: #fff;
+        }
+
+        .flexslider .slides li .slider-text h1,
+        .flexslider .slides li .slider-text h2 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .slider-text-inner {
+            color: rgb(20, 243, 213);
+        }
+
+        .slider-text-inner h2 {
+            /* color: rgb(20, 243, 213); */
+            color: #f94d00;
+            font-size: 48px;
+        }
+
+        .slider-text-inner h1 {
+            /* color: rgb(20, 243, 213); */
+            color: #ec5800;
+            font-size: 54px;
+            font-weight: 700;
+        }
+
+        .slider-text h2 {
+            font-size: 38px;
+            font-weight: 900;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .slider-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <my-header></my-header>
+     <section class="heading-section">
+        <my-card></my-card>
+        <div id="colorlib-about" style='margin-bottom: 0;'>
+            <div class="container">
+                <div class="row row-pb-lg">
+                    <div class="col-md-6">
+                        <div class="about animate-box">
+                            <h2>Welcome to our Company</h2>
+                            <p>Data Alt. Ltd is a registered research and management consulting. Data Alt. Ltd offers
+                                innovative research, impact evaluation, management consulting, and capacity building
+                                services to the public sector, development partners, local and international non-profit
+                                organizations, and the private sector.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="images/logo.png" alt="Company Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- service  -->
+        <div style=" margin-top: 10px; justify-content: center;">
+            <h2>OUR SERVICES</h2>
+        </div>
+        <my-service></my-service>
+        <!-- project -->
+        <div id="colorlib-about" style='margin-bottom: 0;'>
+            <div class="container">
+                <div class="row row-pb-lg">
+                    <div class="col-md-6">
+                        <div class="about animate-box">
+                            <h2>PROJECTS</h2>
+                            <p><i class="fas fa-chevron-circle-right" style="color: rgb(119, 112, 112);"></i> Study of
+                                SMEs perception of financing supply and demand.(ongoing)</p>
+                            <p><i class="fas fa-check-circle" style="color: rgb(119, 112, 112);"></i> Evaluation de la
+                                situation de mise en œuvre des indicateurs d'intégrations du genre, de la VBG ainsi que
+                                le budget sensible au genre dans les contrats de performance des districts.(completed)
+                            </p>
+                        </div>
+                        <!-- color: #FFD43B; -->
+                    </div>
+                    <div class="col-md-6">
+                        <!-- <img class="img-responsive" src="images/data.jpg" alt="Company Image"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <my-footer></my-footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: true,
+                slideshowSpeed: 5000,
+                animationSpeed: 600,
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+
+            $('.js-counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>

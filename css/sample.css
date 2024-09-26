@@ -1,0 +1,80 @@
+.containers {
+background-color: #444444;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+margin-bottom: -400px;
+}
+
+.containers h2 {
+text-align: center;
+margin-bottom: 20px;
+color: rgb(187, 186, 186); /* White text */
+}
+
+forms {
+flex-direction: row;
+background-color: #333333; /* Dark gray background */
+color: white; /* White text */
+font-family: Arial, sans-serif;
+height: 100vh;
+margin: 0;
+} 
+form {
+    display: flex;
+    flex-direction: column;
+    color: white; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.rows {
+display: flex;
+justify-content: space-between;
+}
+
+.col-50 {
+width: 48%;
+}
+
+label {
+margin-top: 10px;
+font-weight: bold;
+color: rgb(187, 186, 186); /* White text */
+font-family: sans-serif;
+/* color: white; White text */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+padding-right: 0px;
+border: 1px solid white; /* White border for input boxes */
+border-radius: 4px;
+background-color: #555555;
+color: white;
+}
+
+textarea {
+resize: vertical;
+}
+
+button {
+background-color: #ffcc00; /* Dark yellow button */
+color: black;
+border: none;
+padding: 15px;
+text-align: center;
+font-size: 16px;
+font-weight: bolder;
+margin-top: 20px;
+cursor: pointer;
+border-radius: 4px;
+width: 200px;
+}
+
+button:hover {
+background-color: #e6b800;
+}
