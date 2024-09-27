@@ -10,6 +10,7 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
     <link rel="icon" href="images/logo.png">
     <script type="module" src="./layouts/main.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -54,33 +55,31 @@
                 <div class="row">
                     <div class="col-md-12 animate-box colorlib-heading animate-box" style="text-align:center;">
                         <h2>Get In Touch</h2>
-                        <form action="#" >
+                        <form id="contactForm">
                             <div class="rows">
                                 <div class="col-50">
                                     <label for="firstName">First Name</label>
-                                    <input type="text" id="firstName"  placeholder="Your firstname" >
+                                    <input type="text" id="firstName" placeholder="Your firstname">
                                 </div>
                                 <div class="col-50">
                                     <label for="lastName">Last Name</label>
-                                    <input type="text" id="lastName"  placeholder="Your lastname">
+                                    <input type="text" id="lastName" placeholder="Your lastname">
                                 </div>
                             </div>
                             <div class="rows">
                                 <div class="col-50">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email"  placeholder="Your email address">
+                                    <input type="email" id="email" placeholder="Your email address">
                                 </div>
                                 <div class="col-50">
                                     <label for="subject">Subject</label>
-                                    <input type="text" id="subject" 
-                                        placeholder="Your subject of this message">
+                                    <input type="text" id="subject" placeholder="Subject of your message">
                                 </div>
-                                </div>
-                                <label for="message">Message</label>
-                                <textarea id="message"  placeholder="Say something about us"
-                                    style="height:200px"></textarea>
-
-                                <button type="submit">Send Message</button>
+                            </div>
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Say something about us" style="height:200px"></textarea>
+                        
+                            <button type="submit">Send Message</button>
                         </form>
                     </div>
                     <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7974.996645784137!2d30.0941661!3d-1.9540059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6f734012893%3A0x45e4eaf57f18d884!2sKG%20628%20St%2C%20Kigali!5e0!3m2!1sen!2srw!4v1717776471986!5m2!1sen!2srw" frameborder="0" style="border:0" allowfullscreen></iframe>	 -->
@@ -94,6 +93,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("DZ5aRC55V9t02k0pS");
+        })();
+    </script>
+    <!-- 
+    //this is a testing done to check if the messaging feature is working properly or not.
+    -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from refreshing the page.
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            // Prepare the parameters for EmailJS
+            const templateParams = {
+                from_first_name: firstName,
+                from_last_name: lastName,
+                from_email: email,
+                subject: subject,
+                message: message,
+            };
+            (function () {
+                emailjs.init("DZ5aRC55V9t02k0pS");
+            })();
+            // Send the email using EmailJS
+            emailjs.send('service_0f8nkak', 'template_a22qdtc', templateParams)
+                .then(function (response) {
+                    alert('Message Sent Successfully!');
+                }, function (error) {
+                    alert('Failed to send the message. Please try again later.');
+                });
+        });
+    </script>
 </body>
 
 </html>
